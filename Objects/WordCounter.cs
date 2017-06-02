@@ -7,7 +7,14 @@ namespace WordCounter
   {
     public bool CheckForWord(string userInput)
     {
-      return false;
+      if(userInput.GetType() == typeof(string))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }
