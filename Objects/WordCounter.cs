@@ -5,6 +5,28 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
+    private string _singleWord;
+    private string _sentence;
+
+    public RepeatCounter(string userInputWord, string userInputSentence=null)
+    {
+      _singleWord = userInputWord;
+      if(userInputSentence!=null)
+      {
+        _sentence = userInputSentence;
+      }
+    }
+
+    public string GetSingleWord()
+    {
+      return _singleWord;
+    }
+
+    public string GetSentence()
+    {
+      return _sentence;
+    }
+//TESTED METHODS
     public string CheckForWord(string userInput)
     {
       string successCheck = "fail";

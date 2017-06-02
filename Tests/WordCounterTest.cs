@@ -9,14 +9,14 @@ namespace WordCounter
     public void Is_CheckForWordEntered_true()
     {
       string userInput = "Bird";
-      RepeatCounter newSingleWord = new RepeatCounter();
+      RepeatCounter newSingleWord = new RepeatCounter(userInput);
       Assert.Equal("Pass, is String", newSingleWord.CheckForWord(userInput));
     }
     [Fact]
     public void Is_CheckForSentenceEntered_true()
     {
       string userInput = "Bird, bird, bird, bird is the word";
-      RepeatCounter newSentence = new RepeatCounter();
+      RepeatCounter newSentence = new RepeatCounter(userInput);
       Assert.Equal("Pass, is Sentence", newSentence.CheckForWord(userInput));
     }
     [Fact]
@@ -24,7 +24,7 @@ namespace WordCounter
     {
       string userInput = "Bird, bird, bird, bird is the word";
       string expectedOutput = "Bird bird bird bird is the word";
-      RepeatCounter newTestPunctuation = new RepeatCounter();
+      RepeatCounter newTestPunctuation = new RepeatCounter(userInput);
       Assert.Equal(expectedOutput, newTestPunctuation.RemovePunctuation(userInput));
     }
     [Fact]
@@ -32,7 +32,7 @@ namespace WordCounter
     {
       string wordToFind = "bird";
       string sentenceToCheck = "Bird, bird, bird, bird is the word";
-      RepeatCounter newTestFindWord = new RepeatCounter();
+      RepeatCounter newTestFindWord = new RepeatCounter(sentenceToCheck, wordToFind);
       Assert.Equal(true, newTestFindWord.DoesSentenceContainWord(sentenceToCheck, wordToFind));
     }
     [Fact]
@@ -40,7 +40,7 @@ namespace WordCounter
     {
       string wordToFind = "bird";
       string sentenceToCheck = "Bird, bird, bird, bird is the word";
-      RepeatCounter newTestCountingWord = new RepeatCounter();
+      RepeatCounter newTestCountingWord = new RepeatCounter(sentenceToCheck, wordToFind);
       Assert.Equal(4, newTestCountingWord.CountRepeats(sentenceToCheck, wordToFind));
     }
   }
