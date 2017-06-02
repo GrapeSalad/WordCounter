@@ -27,6 +27,25 @@ namespace WordCounter
       return _sentence;
     }
 //TESTED METHODS
+    public bool CheckForWord(string userInput)
+    {
+      char[] userInputToArray = userInput.ToCharArray();
+      bool isWord = false;
+      for(var i=0; i<userInputToArray.Length; i++)
+      {
+        int numberToTestAgainst;
+        if(int.TryParse(userInputToArray[i].ToString(), out numberToTestAgainst))
+        {
+          isWord = false;
+          break;
+        }
+        else
+        {
+          isWord = true;
+        }
+      }
+      return isWord;
+    }
     public string CheckForSentence(string userInput)
     {
       string successCheck = "fail";
@@ -38,7 +57,7 @@ namespace WordCounter
         }
         else
         {
-          return successCheck = "Pass, is String";
+          return successCheck;
         }
       }
       else

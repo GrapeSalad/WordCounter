@@ -17,7 +17,7 @@ namespace WordCounter
     {
       string userInput = "Bird, bird, bird, bird is the word";
       RepeatCounter newSentence = new RepeatCounter(userInput);
-      Assert.Equal("Pass, is Sentence", newSentence.CheckForWord(userInput));
+      Assert.Equal("Pass, is Sentence", newSentence.CheckForSentence(userInput));
     }
     [Fact]
     public void Is_RemovedPunctuation_true()

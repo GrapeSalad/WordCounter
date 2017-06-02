@@ -1,3 +1,86 @@
 body{
   font-family: 'Amatic SC', cursive;
+  background: #3E606F;
+}
+.container {
+  background-color: rgba(209, 219, 189, .8);
+  height: 600px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+.renderBody {
+  background-color: rgba(252, 255, 245, .6);
+  padding: 10px;
+}
+
+p {
+  font-size: 24px
+}
+
+form label {
+  width: 110px;
+  font-size: 20px;
+}
+
+form label:first-child{
+  width: 80px;
+}
+
+form input {
+  margin-right: 10px;
+}
+
+button {
+  margin-left: 30px;
+}
+
+img {
+  /*display: none;*/
+  float: left;
+  position: absolute;
+  top: 50px;
+  left: 40%;
+  z-index: -10;
+}
+
+#one {
+  display: visible !important;
+  z-index: 50;
+  top: 100px;
+}
+#two {
+
+}
+#three {
+
+}
+#four {
+
+}
+#five {
+
+}
+#six {
+
+}
+#seven {
+
+}
+#eight {
+
+}
+#nine {
+
+}
+@keyframes numberDance {
+  0% {top: 50px}
+  50% {top: 100px;}
 }

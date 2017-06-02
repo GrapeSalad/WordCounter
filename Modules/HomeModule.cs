@@ -15,7 +15,7 @@ namespace WordCounter
         RepeatCounter newInstance = new RepeatCounter(Request.Form["word"], Request.Form["sentence"]);
         string userInputWord = newInstance.GetSingleWord();
         string userInputSentence = newInstance.GetSentence();
-        if((newInstance.CheckForWord(userInputWord) == "Pass, is String") && (newInstance.CheckForWord(userInputSentence) == "Pass, is Sentence"))
+        if((newInstance.CheckForWord(userInputWord)) && (newInstance.CheckForSentence(userInputSentence) == "Pass, is Sentence"))
         {
           if(newInstance.DoesSentenceContainWord(userInputSentence, userInputWord))
           {
