@@ -32,7 +32,14 @@ namespace WordCounter
     }
     public bool DoesSentenceContainWord(string sentenceToCheck, string wordToFind)
     {
-      return false;
+      if(sentenceToCheck.Contains(wordToFind))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
     }
   }
 }
