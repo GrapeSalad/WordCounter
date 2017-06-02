@@ -51,7 +51,6 @@ namespace WordCounter
         {
           if(splitSentence[i] == wordToFind)
           count ++;
-          Console.WriteLine(count);
         }
 
       }
