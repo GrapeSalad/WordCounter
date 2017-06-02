@@ -27,7 +27,7 @@ namespace WordCounter
       return _sentence;
     }
 //TESTED METHODS
-    public string CheckForWord(string userInput)
+    public string CheckForSentence(string userInput)
     {
       string successCheck = "fail";
       if(userInput.GetType() == typeof(string))
@@ -46,11 +46,13 @@ namespace WordCounter
         return successCheck;
       }
     }
+
     public string RemovePunctuation(string userInput)
     {
       string outputTest = userInput.Replace(",", "");
       return outputTest;
     }
+
     public bool DoesSentenceContainWord(string sentenceToCheck, string wordToFind)
     {
       if(sentenceToCheck.Contains(wordToFind))
@@ -62,6 +64,7 @@ namespace WordCounter
         return false;
       }
     }
+
     public int CountRepeats(string sentenceToCheck, string wordToFind)
     {
       int count = 0;

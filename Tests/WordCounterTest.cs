@@ -6,11 +6,11 @@ namespace WordCounter
   public class WordCounterTest
   {
     [Fact]
-    public void Is_CheckForWordEntered_true()
+    public void Is_CheckForWordEntered_false()
     {
-      string userInput = "Bird";
+      string userInput = "B1rd";
       RepeatCounter newSingleWord = new RepeatCounter(userInput);
-      Assert.Equal("Pass, is String", newSingleWord.CheckForWord(userInput));
+      Assert.Equal(false, newSingleWord.CheckForWord(userInput));
     }
     [Fact]
     public void Is_CheckForSentenceEntered_true()
