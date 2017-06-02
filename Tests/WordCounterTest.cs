@@ -19,5 +19,13 @@ namespace WordCounter
       RepeatCounter newSentence = new RepeatCounter();
       Assert.Equal("Pass, is Sentence", newSentence.CheckForWord(userInput));
     }
+    [Fact]
+    public void Is_RemovedPunctuation_true()
+    {
+      string userInput = "Bird, bird, bird, bird is the word";
+      string expectedOutput = "Bird bird bird bird is the word";
+      RepeatCounter newTestPunctuation = new RepeatCounter();
+      Assert.Equal(expectedOutput, newTestPunctuation.RemovePunctuation(userInput));
+    }
   }
 }

@@ -12,6 +12,7 @@ namespace WordCounter
       {
         if(userInput.Contains(" ") || userInput.Contains(",") || userInput.Contains("."))
         {
+
           return successCheck = "Pass, is Sentence";
         }
         else
@@ -23,6 +24,11 @@ namespace WordCounter
       {
         return successCheck;
       }
+    }
+    public string RemovePunctuation(string userInput)
+    {
+      string outputTest = userInput.Replace(",", "");
+      return outputTest;
     }
   }
 }
