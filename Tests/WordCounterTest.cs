@@ -27,5 +27,13 @@ namespace WordCounter
       RepeatCounter newTestPunctuation = new RepeatCounter();
       Assert.Equal(expectedOutput, newTestPunctuation.RemovePunctuation(userInput));
     }
+    [Fact]
+    public void Is_DoesSentenceContainWord_true()
+    {
+      string wordToFind = "bird";
+      string sentenceToCheck = "Bird, bird, bird, bird is the word";
+      RepeatCounter newTestFindWord = new RepeatCounter();
+      Assert.Equal(true, newTestFindWord.DoesSentenceContainWord(sentenceToCheck, wordToFind));
+    }
   }
 }

@@ -30,5 +30,9 @@ namespace WordCounter
       string outputTest = userInput.Replace(",", "");
       return outputTest;
     }
+    public bool DoesSentenceContainWord(string sentenceToCheck, string wordToFind)
+    {
+      return false;
+    }
   }
 }
