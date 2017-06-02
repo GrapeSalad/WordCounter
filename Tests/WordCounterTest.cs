@@ -35,5 +35,13 @@ namespace WordCounter
       RepeatCounter newTestFindWord = new RepeatCounter();
       Assert.Equal(true, newTestFindWord.DoesSentenceContainWord(sentenceToCheck, wordToFind));
     }
+    [Fact]
+    public void Is_CountRepeatsReturningTheRightValue_true()
+    {
+      string wordToFind = "bird";
+      string sentenceToCheck = "Bird, bird, bird, bird is the word";
+      RepeatCounter newTestCountingWord = new RepeatCounter();
+      Assert.Equal(4, newTestCountingWord.CountRepeats(sentenceToCheck, wordToFind));
+    }
   }
 }

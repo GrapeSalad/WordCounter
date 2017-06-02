@@ -10,9 +10,8 @@ namespace WordCounter
       string successCheck = "fail";
       if(userInput.GetType() == typeof(string))
       {
-        if(userInput.Contains(" ") || userInput.Contains(",") || userInput.Contains("."))
+        if((userInput.Contains(" ") || userInput.Contains(",")) || userInput.Contains("."))
         {
-
           return successCheck = "Pass, is Sentence";
         }
         else
@@ -40,6 +39,10 @@ namespace WordCounter
       {
         return false;
       }
+    }
+    public int CountRepeats(string sentenceToCheck, string wordToFind)
+    {
+      return 0;
     }
   }
 }

@@ -8,7 +8,9 @@
 | Punctuation will be removed from the sentence | "One, Two, Three." | One Two Three |
 |---| By removing punctuation the sentence will be easier to parse |---|
 | Will check the sentence to see if it contains the previously entered single word | "Bird, bird, bird, bird is the word", "bird" | True |
-|---| Checking the sentence for a word is the requirement of this program |---|
+|---| Checking the sentence for a word is a requirement of this program |---|
+| Determine the amount of times a word in is a sentence | "Bird, bird, bird, bird is the word" | bird, 4 |
+|---| This is also a requirement of the program |---|
 **Wish-List**
 | Will turn a sentence into an array | "Today I saw a cat, and it had one blue eye" | ["Today", "I", "saw", "a", "cat", "and", "it", "had", "one", "blue", "eye"] |
 |---| Splitting the sentence into an array will allow me to count the words, and to see if there are any duplicates (and how many) |---|
