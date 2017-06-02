@@ -5,6 +5,9 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
-    
+    public bool CheckForWord(string userInput)
+    {
+      return false;
+    }
   }
 }
