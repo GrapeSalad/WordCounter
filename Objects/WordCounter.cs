@@ -42,7 +42,20 @@ namespace WordCounter
     }
     public int CountRepeats(string sentenceToCheck, string wordToFind)
     {
-      return 0;
+      int count = 0;
+      string modifiedSentence = this.RemovePunctuation(sentenceToCheck.ToLower());
+      if(this.DoesSentenceContainWord(sentenceToCheck, wordToFind))
+      {
+        List<string> splitSentence = new List<string>(modifiedSentence.Split(' '));
+        for(var i=0; i<splitSentence.Count; i++)
+        {
+          if(splitSentence[i] == wordToFind)
+          count ++;
+          Console.WriteLine(count);
+        }
+
+      }
+      return count;
     }
   }
 }
