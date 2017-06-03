@@ -5,7 +5,7 @@ body{
 }
 .container {
   background-color: rgba(209, 219, 189, .8);
-  height: 600px;
+  height: 800px;
 }
 
 h1 {
@@ -43,7 +43,7 @@ button {
   margin-left: 30px;
 }
 
-/*img {
+img {
   visibility: hidden;
   float: left;
   position: absolute;
@@ -52,14 +52,14 @@ button {
   z-index: -10;
 }
 
-#one, #two, #three, #four, #five, #six, #seven, #eight, #nine {
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
   visibility: visible;
   z-index: 50;
   animation: numberDance;
   animation-duration: 1s;
   animation-iteration-count: 1;
   top: 400px;
-}*/
+}
 
 @keyframes numberDance {
   0% {top: 100px}

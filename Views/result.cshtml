@@ -6,3 +6,52 @@
 
 
 <p><a href="/">Return to the Home Page</a></p>
+@functions{
+  public string GetClassFromModel(int classNumber)
+  {
+    string classNumberToString = "";
+    if(classNumber == 1)
+    {
+      classNumberToString = "one";
+    }
+    else if(classNumber == 2)
+    {
+      classNumberToString = "two";
+    }
+    else if(classNumber == 3)
+    {
+      classNumberToString = "three";
+    }
+    else if(classNumber == 4)
+    {
+      classNumberToString = "four";
+    }
+    else if(classNumber == 5)
+    {
+      classNumberToString = "five";
+    }
+    else if(classNumber == 6)
+    {
+      classNumberToString = "six";
+    }
+    else if(classNumber == 7)
+    {
+      classNumberToString = "seven";
+    }
+    else if(classNumber == 8)
+    {
+      classNumberToString = "eight";
+    }
+    else
+    {
+      classNumberToString = "nine";
+    }
+    return classNumberToString;
+  }
+  public string GetSRCFromModel(int modelNumber)
+  {
+    string imgSRC = "/Content/img/num" + modelNumber + "GIF.gif";
+    return imgSRC;
+  }
+}
+<img class="@GetClassFromModel(@Model)" src="@GetSRCFromModel(@Model)" alt="Its number @Model!">
